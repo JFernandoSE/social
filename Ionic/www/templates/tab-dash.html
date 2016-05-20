@@ -24,5 +24,26 @@
         </div>
       </div>
     </div>
+      
+    <div class="card" ng-controller="Social">
+        <div class="item item-text-wrap">
+            <button ng-click="share('w','SE Example','','http://softwareevolutivo.com.ec/');" class="button button-light col col-10">
+                <i class="icon ion-social-whatsapp"></i>
+            </button>
+            <button ng-click="share('f','SE Example','','http://softwareevolutivo.com.ec/');"  class="button button-light col col-10" >
+                <i class="icon ion-social-facebook"></i>
+            </button>
+            <button class="button button-light col col-10">
+                <i class="icon ion-social-twitter"></i>
+            </button>
+            <button class="button button-light col col-10">
+                <i class="icon ion-android-textsms"></i>
+            </button>
+            <button class="button button-light col col-10">
+                <i class="icon ion-ios-email"></i>
+            </button>
+        </div>
+    </div>
+    <button onclick="window.plugins.socialsharing.share('Message only')">message only</button>
   </ion-content>
 </ion-view>

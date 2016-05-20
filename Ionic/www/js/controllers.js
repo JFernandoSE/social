@@ -17,6 +17,19 @@ angular.module('starter.controllers', [])
   };
 })
 
+.controller('Social', ['$scope', function ($scope){
+    $scope.share=function(t, msg, img, link){
+        if(t=='w'){
+            alert('whatsaap');
+            window.plugins.socialsharing.shareViaWhatsApp(msg, '', link);
+        }else if(t=='f'){
+            alert('facebook');
+            window.plugins.socialsharing.shareViaFacebook(msg, '', link);
+        }
+    }
+}])
+
+
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
 })
